@@ -24,5 +24,3 @@ export class LiffMockPlugin implements LiffPlugin<LiffMockApi> {
     };
   }
 }
-
-export default LiffMockPlugin;
