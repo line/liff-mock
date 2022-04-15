@@ -10,12 +10,11 @@ export type LiffMockConfig = {
 
 export type ExtendedConfig = Config & LiffMockConfig;
 
-export type ExtendedInit<T = ActualLiff['init']> = T extends (
-  config: Config,
-  ...args: infer U2
-) => infer U3
-  ? (config: ExtendedConfig, ...args: U2) => U3
-  : never;
+export type ExtendedInit = (
+  config: ExtendedConfig,
+  successCallback?: () => void,
+  errorCallback?: (error: Error) => void
+) => Promise<void>;
 
 export type LiffMockApi = {
   set: (
