@@ -8,12 +8,6 @@ LIFF Mock is a LIFF Plugin that make testing your LIFF app easy.
 
 ## NPM
 
-<!-- TODO: Update after the repository is made public -->
-
-<!-- [example]() -->
-
-<!-- npm url -->
-
 ```sh
 $ npm install @line/liff-mock
 ```
@@ -35,16 +29,6 @@ console.log(profile);
 ```
 
 ## CDN
-
-<!-- TODO: Update after the repository is made public -->
-<!-- [example]() -->
-
-<!-- cdn url -->
-
-<!-- ```html -->
-<!-- in <head> tag -->
-<!-- <script src="cdn url"></script> -->
-<!-- ``` -->
 
 ```js
 const liff = window.liff;
@@ -112,11 +96,9 @@ console.log(profile);
 
 # Example
 
-<!-- WIP -->
+See [examples](./examples)
 
 # Contribution
-
-<!-- TBD -->
 
 ```sh
 $ nvm use
