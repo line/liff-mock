@@ -23,6 +23,7 @@ liff.init({
   mock: true, // enable mock mode
 });
 
+if (!liff.isInClient()) liff.login();
 const profile = await liff.getProfile();
 // { displayName: 'Brown', userId: '123456789', statusMessage: 'hello' }
 console.log(profile);
@@ -48,6 +49,7 @@ liff.init({
   mock: true, // enable mock mode
 });
 
+if (!liff.isInClient()) liff.login();
 const profile = await liff.getProfile();
 // { displayName: 'Brown', userId: '123456789', statusMessage: 'hello' }
 console.log(profile);

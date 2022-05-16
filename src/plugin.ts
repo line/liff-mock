@@ -10,12 +10,15 @@ export class LiffMockPlugin implements LiffPlugin<LiffMockApi> {
 
   install({ liff }: LiffPluginContext): LiffMockApi {
     const originalInit = liff.init;
+    const isInClient = liff.isInClient();
+
     const mockedInit = createMockedInit((mockedLiff) => {
       Object.entries(mockedLiff).forEach(([key, value]) => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (liff as any)[key] = value;
       });
-    });
+    }, isInClient);
+
     liff.init = getActualInitOrMockedInit(originalInit, mockedInit);
 
     return {
