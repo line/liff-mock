@@ -30,6 +30,13 @@ console.log(profile);
 
 ## CDN
 
+https://unpkg.com/@line/liff-mock@1.0.0/dist/umd/liff-mock.js
+
+```html
+<!-- in <head> tag -->
+<script src="https://unpkg.com/@line/liff-mock@1.0.0/dist/umd/liff-mock.js"></script>
+```
+
 ```js
 const liff = window.liff;
 const liffMockPlugin = window.liffMock;
