@@ -39,7 +39,8 @@ import { _removeListener } from './_removeListener';
 export const createMockedInit = (
   injectLiffMock: (
     liff: Omit<ActualLiff, 'init' | 'use' | 'ready' | 'id'>
-  ) => void
+  ) => void,
+  isCalledInLiffBrowser: boolean
 ): ActualLiff['init'] => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const init: ActualLiff['init'] = (config, successCallback, errorCallback) => {
@@ -88,6 +89,12 @@ export const createMockedInit = (
     }
 
     globalStore.initIsCalled();
+
+    // Login automatically if LIFF app is running in LIFF browser
+    // https://developers.line.biz/en/reference/liff/#login
+    if (isCalledInLiffBrowser && globalStore.numberOfLoginCalled === 0) {
+      login();
+    }
 
     if (typeof successCallback === 'function') {
       successCallback();
