@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@line/liff": "2.19.0",
-    "@line/liff-mock": "0.0.3"
+    "@line/liff": "2.19.1",
+    "@line/liff-mock": "1.0.1"
   },
   "devDependencies": {
     "ts-loader": "9.2.8",
