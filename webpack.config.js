@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === 'production';
 /** @type import('webpack').Configuration */
 const config = {
   context: path.join(__dirname, 'src'),
-  entry: './plugin.ts',
+  entry: './index.ts',
   output: {
     path: path.join(__dirname, 'dist', 'umd'),
     filename: 'liff-mock.js',
