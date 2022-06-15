@@ -24,8 +24,8 @@ const onInitClick = async () => {
 const login = async () => {
   try {
     await liff.login();
-  } catch (e) {
     console.log('liff.login done');
+  } catch (e) {
     console.error('liff.login error', e);
   }
 };
