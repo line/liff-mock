@@ -49,6 +49,7 @@ export type TargetApi = {
   isSubWindow: ActualLiff['isSubWindow'];
   'permission.query': ActualLiff['permission']['query'];
   'permission.requestAll': ActualLiff['permission']['requestAll'];
+  'i18n.setLang': ActualLiff['i18n']['setLang'];
   _dispatchEvent: ActualLiff['_dispatchEvent'];
   _call: ActualLiff['_call'];
   _addListener: ActualLiff['_addListener'];
