@@ -1,6 +1,6 @@
 {
   "name": "@line/liff-mock",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Make testing your LIFF app easy",
   "main": "dist/index.js",
   "unpkg": "dist/umd/liff-mock.js",
