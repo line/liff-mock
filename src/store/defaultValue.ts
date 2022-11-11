@@ -96,6 +96,7 @@ export const defaultMockData: MockData = {
   isSubWindow: false,
   'permission.query': { state: 'unavailable' },
   'permission.requestAll': undefined,
+  'i18n.setLang': undefined,
   _dispatchEvent: undefined,
   _call: undefined,
   _addListener: undefined,

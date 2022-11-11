@@ -14,6 +14,7 @@ import { getOS } from './getOS';
 import { getProfile } from './getProfile';
 import { getProfilePlus } from './getProfilePlus';
 import { getVersion } from './getVersion';
+import { i18n_setLang } from './i18n_setLang';
 import { initPlugins } from './initPlugins';
 import { isApiAvailable } from './isApiAvailable';
 import { isInClient } from './isInClient';
@@ -73,6 +74,9 @@ export const createMockedInit = (
         scanCodeV2: scanCode,
         closeWindow,
         initPlugins,
+        i18n: {
+          setLang: i18n_setLang,
+        },
         // private
         getAId,
         getProfilePlus,
