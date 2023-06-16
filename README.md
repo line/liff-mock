@@ -31,12 +31,14 @@ console.log(profile);
 
 ### With [Pluggable SDK](https://developers.line.biz/en/docs/liff/pluggable-sdk/)
 
+If you use LIFF Mock with Pluggable SDK mode, you have to install `IsInClientModule` before the installation of `LiffMockPlugin` because LIFF Mock depends on `liff.isInClient` API.
+
 ```ts
 import liff from '@line/liff/core';
 import IsInClientModule from "@line/liff/is-in-client";
 import { LiffMockPlugin } from '@line/liff-mock';
 
-liff.use(new IsInClientModule());
+liff.use(new IsInClientModule());  // <-- Please install IsInClientModule before LiffMockPlugin
 liff.use(new LiffMockPlugin());
 
 liff.init({
