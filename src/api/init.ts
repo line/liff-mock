@@ -39,7 +39,7 @@ import { _removeListener } from './_removeListener';
 
 export const createMockedInit = (
   injectLiffMock: (
-    liff: Omit<ActualLiff, 'init' | 'use' | 'ready' | 'id'>
+    liff: Omit<ActualLiff, 'init' | 'use' | 'ready' | 'id' | '$mock'>
   ) => void,
   isCalledInLiffBrowser: boolean
 ): ActualLiff['init'] => {
