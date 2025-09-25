@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('closeWindow', () => {
   it('should call mockStore.getMockData', () => {
     closeWindow();
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('closeWindow');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('closeWindow');
   });
 });

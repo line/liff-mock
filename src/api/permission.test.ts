@@ -14,16 +14,18 @@ describe('permission', () => {
   describe('query', () => {
     it('should call mockStore.getMockData', async () => {
       await permission.query('chat_message.write');
-      expect(_mockStore.getMockData).toBeCalledTimes(1);
-      expect(_mockStore.getMockData).toBeCalledWith('permission.query');
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith('permission.query');
     });
   });
 
   describe('requestAll', () => {
     it('should call mockStore.getMockData', async () => {
       await permission.requestAll();
-      expect(_mockStore.getMockData).toBeCalledTimes(1);
-      expect(_mockStore.getMockData).toBeCalledWith('permission.requestAll');
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith(
+        'permission.requestAll'
+      );
     });
   });
 });

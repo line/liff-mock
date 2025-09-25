@@ -10,7 +10,7 @@ describe('_addListener', () => {
     _addListener('a', () => {
       return;
     });
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('_addListener');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('_addListener');
   });
 });

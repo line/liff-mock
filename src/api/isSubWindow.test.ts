@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('isSubWindow', () => {
   it('should call mockStore.getMockData', () => {
     isSubWindow();
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('isSubWindow');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('isSubWindow');
   });
 });

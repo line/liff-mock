@@ -26,10 +26,10 @@ describe('LiffMockPlugin', () => {
     const module = new LiffMockPlugin();
     module.install({ liff, hooks: {} as any });
 
-    expect(_createMockedInit).toBeCalledTimes(1);
-    expect(_getActualInitOrMockedInit).toBeCalledTimes(1);
-    expect(_getActualInitOrMockedInit).toBeCalledWith(init, mockedInit);
-    expect(isInClient).toBeCalledTimes(1);
+    expect(_createMockedInit).toHaveBeenCalledTimes(1);
+    expect(_getActualInitOrMockedInit).toHaveBeenCalledTimes(1);
+    expect(_getActualInitOrMockedInit).toHaveBeenCalledWith(init, mockedInit);
+    expect(isInClient).toHaveBeenCalledTimes(1);
     expect(liff.id).toBe('id'); // preserved
     expect(liff.init).toBe(mockedInit); // replaced
   });

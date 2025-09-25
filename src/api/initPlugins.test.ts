@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('initPlugins', () => {
   it('should call mockStore.getMockData', async () => {
     await initPlugins([]);
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('initPlugins');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('initPlugins');
   });
 });
