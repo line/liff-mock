@@ -24,6 +24,7 @@ describe('LiffMockPlugin', () => {
     const liff = { id: 'id', init, isInClient } as unknown as ActualLiff;
 
     const module = new LiffMockPlugin();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     module.install({ liff, hooks: {} as any });
 
     expect(_createMockedInit).toHaveBeenCalledTimes(1);
@@ -39,6 +40,7 @@ describe('LiffMockPlugin', () => {
     const liff = { isInClient } as unknown as ActualLiff;
 
     const module = new LiffMockPlugin();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const res = module.install({ liff, hooks: {} as any });
 
     expect(res.set).toBeDefined();
