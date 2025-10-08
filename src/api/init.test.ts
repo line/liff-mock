@@ -11,7 +11,7 @@ describe('mockedInit', () => {
     const isInClient = false;
     const mockedInit = createMockedInit(injectLiffMock, isInClient);
     await mockedInit({ liffId: 'xx' });
-    expect(injectLiffMock).toBeCalledTimes(1);
+    expect(injectLiffMock).toHaveBeenCalledTimes(1);
     expect(globalStore.numberOfInitCalled).toBe(1);
     expect(globalStore.numberOfLoginCalled).toBe(0);
   });
@@ -22,7 +22,7 @@ describe('mockedInit', () => {
     const isInClient = true;
     const mockedInit = createMockedInit(injectLiffMock, isInClient);
     await mockedInit({ liffId: 'xx' });
-    expect(injectLiffMock).toBeCalledTimes(1);
+    expect(injectLiffMock).toHaveBeenCalledTimes(1);
     expect(globalStore.numberOfInitCalled).toBe(1);
     expect(globalStore.numberOfLoginCalled).toBe(1);
   });
@@ -32,10 +32,10 @@ describe('mockedInit', () => {
     const isInClient = true;
     const mockedInit = createMockedInit(injectLiffMock, isInClient);
     await mockedInit({ liffId: 'xx' });
-    expect(injectLiffMock).toBeCalledTimes(1);
+    expect(injectLiffMock).toHaveBeenCalledTimes(1);
     expect(globalStore.numberOfLoginCalled).toBe(1);
     await mockedInit({ liffId: 'xx' });
-    expect(injectLiffMock).toBeCalledTimes(1);
+    expect(injectLiffMock).toHaveBeenCalledTimes(1);
     expect(globalStore.numberOfLoginCalled).toBe(1);
   });
 });

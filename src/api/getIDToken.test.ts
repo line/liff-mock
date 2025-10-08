@@ -9,14 +9,14 @@ const _mockStore = mocked(mockStore);
 
 describe('getIDToken', () => {
   it('should throw an error if liff.init hasn`t been called yet', () => {
-    expect(getIDToken).toThrowError(ERROR_MESSAGE.REQUIRE_INIT);
-    expect(_mockStore.getMockData).toBeCalledTimes(0);
+    expect(getIDToken).toThrow(ERROR_MESSAGE.REQUIRE_INIT);
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(0);
   });
 
   it('should call mockStore.getMockData', () => {
     globalStore.initIsCalled();
     getIDToken();
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('getIDToken');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('getIDToken');
   });
 });

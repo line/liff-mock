@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('openWindow', () => {
   it('should call mockStore.getMockData', () => {
     openWindow({ url: 'https://line.me' });
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('openWindow');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('openWindow');
   });
 });

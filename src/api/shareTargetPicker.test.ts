@@ -13,21 +13,21 @@ describe('shareTargetPicker', () => {
   });
 
   it('should throw an error if liff.init hasn`t been called yet', () => {
-    expect(shareTargetPicker).toThrowError(ERROR_MESSAGE.REQUIRE_INIT);
-    expect(_mockStore.getMockData).toBeCalledTimes(0);
+    expect(shareTargetPicker).toThrow(ERROR_MESSAGE.REQUIRE_INIT);
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(0);
   });
 
   it('should throw an error if liff.login hasn`t been called yet', () => {
     globalStore.initIsCalled();
-    expect(shareTargetPicker).toThrowError(ERROR_MESSAGE.REQUIRE_LOGIN);
-    expect(_mockStore.getMockData).toBeCalledTimes(0);
+    expect(shareTargetPicker).toThrow(ERROR_MESSAGE.REQUIRE_LOGIN);
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(0);
   });
 
   it('should call mockStore.getMockData', () => {
     globalStore.initIsCalled();
     globalStore.loginIsCalled();
     shareTargetPicker([]);
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('shareTargetPicker');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('shareTargetPicker');
   });
 });

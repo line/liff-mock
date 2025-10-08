@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('getOS', () => {
   it('should call mockStore.getMockData', () => {
     getOS();
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('getOS');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('getOS');
   });
 });

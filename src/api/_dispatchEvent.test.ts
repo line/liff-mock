@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('_dispatchEvent', () => {
   it('should call mockStore.getMockData', () => {
     _dispatchEvent('');
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('_dispatchEvent');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('_dispatchEvent');
   });
 });

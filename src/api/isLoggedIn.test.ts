@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('isLoggedIn', () => {
   it('should call mockStore.getMockData', () => {
     isLoggedIn();
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('isLoggedIn');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('isLoggedIn');
   });
 });

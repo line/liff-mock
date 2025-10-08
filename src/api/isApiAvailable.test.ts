@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('isApiAvailable', () => {
   it('should call mockStore.getMockData', () => {
     isApiAvailable('someApi');
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('isApiAvailable');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('isApiAvailable');
   });
 });

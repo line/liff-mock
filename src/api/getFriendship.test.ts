@@ -13,21 +13,21 @@ describe('getFriendship', () => {
   });
 
   it('should throw an error if liff.init hasn`t been called yet', () => {
-    expect(getFriendship).toThrowError(ERROR_MESSAGE.REQUIRE_INIT);
-    expect(_mockStore.getMockData).toBeCalledTimes(0);
+    expect(getFriendship).toThrow(ERROR_MESSAGE.REQUIRE_INIT);
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(0);
   });
 
   it('should throw an error if liff.login hasn`t been called yet', () => {
     globalStore.initIsCalled();
-    expect(getFriendship).toThrowError(ERROR_MESSAGE.REQUIRE_LOGIN);
-    expect(_mockStore.getMockData).toBeCalledTimes(0);
+    expect(getFriendship).toThrow(ERROR_MESSAGE.REQUIRE_LOGIN);
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(0);
   });
 
   it('should call mockStore.getMockData', () => {
     globalStore.initIsCalled();
     globalStore.loginIsCalled();
     getFriendship();
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('getFriendship');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('getFriendship');
   });
 });

@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('clear', () => {
   it('should call mockStore.clearAll', () => {
     clear();
-    expect(_mockStore.clearAll).toBeCalledTimes(1);
-    expect(_mockStore.clearAll).toBeCalledWith();
+    expect(_mockStore.clearAll).toHaveBeenCalledTimes(1);
+    expect(_mockStore.clearAll).toHaveBeenCalledWith();
   });
 });

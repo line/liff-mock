@@ -10,7 +10,7 @@ describe('_postMessage', () => {
     _postMessage('a', () => {
       return;
     });
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('_postMessage');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('_postMessage');
   });
 });

@@ -8,7 +8,7 @@ const _mockStore = mocked(mockStore);
 describe('isInClient', () => {
   it('should call mockStore.getMockData', () => {
     isInClient();
-    expect(_mockStore.getMockData).toBeCalledTimes(1);
-    expect(_mockStore.getMockData).toBeCalledWith('isInClient');
+    expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+    expect(_mockStore.getMockData).toHaveBeenCalledWith('isInClient');
   });
 });

@@ -16,8 +16,8 @@ describe('subWindow', () => {
       subWindow.on('error', () => {
         return 0;
       });
-      expect(_mockStore.getMockData).toBeCalledTimes(1);
-      expect(_mockStore.getMockData).toBeCalledWith('subWindow.on');
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith('subWindow.on');
     });
   });
 
@@ -26,32 +26,32 @@ describe('subWindow', () => {
       subWindow.off('error', () => {
         return 0;
       });
-      expect(_mockStore.getMockData).toBeCalledTimes(1);
-      expect(_mockStore.getMockData).toBeCalledWith('subWindow.off');
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith('subWindow.off');
     });
   });
 
   describe('open', () => {
     it('should call mockStore.getMockData', async () => {
       await subWindow.open({ url: '' });
-      expect(_mockStore.getMockData).toBeCalledTimes(1);
-      expect(_mockStore.getMockData).toBeCalledWith('subWindow.open');
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith('subWindow.open');
     });
   });
 
   describe('cancel', () => {
     it('should call mockStore.getMockData', async () => {
       await subWindow.cancel({ url: '' });
-      expect(_mockStore.getMockData).toBeCalledTimes(1);
-      expect(_mockStore.getMockData).toBeCalledWith('subWindow.cancel');
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith('subWindow.cancel');
     });
   });
 
   describe('submit', () => {
     it('should call mockStore.getMockData', async () => {
       await subWindow.submit({ url: '' });
-      expect(_mockStore.getMockData).toBeCalledTimes(1);
-      expect(_mockStore.getMockData).toBeCalledWith('subWindow.submit');
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith('subWindow.submit');
     });
   });
 });
