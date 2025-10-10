@@ -13,6 +13,7 @@ export type TargetApi = {
   init: ActualLiff['init'];
   getOS: ActualLiff['getOS'];
   getLanguage: ActualLiff['getLanguage'];
+  getAppLanguage: ActualLiff['getAppLanguage'];
   getVersion: ActualLiff['getVersion'];
   getLineVersion: ActualLiff['getLineVersion'];
   isInClient: ActualLiff['isInClient'];
@@ -49,7 +50,14 @@ export type TargetApi = {
   isSubWindow: ActualLiff['isSubWindow'];
   'permission.query': ActualLiff['permission']['query'];
   'permission.requestAll': ActualLiff['permission']['requestAll'];
+  'permission.getGrantedAll': ActualLiff['permission']['getGrantedAll'];
   'i18n.setLang': ActualLiff['i18n']['setLang'];
+  'iap.getPlatformProducts': ActualLiff['iap']['getPlatformProducts'];
+  'iap.createPayment': ActualLiff['iap']['createPayment'];
+  'iap.requestConsentAgreement': ActualLiff['iap']['requestConsentAgreement'];
+  createShortcutOnHomeScreen: ActualLiff['createShortcutOnHomeScreen'];
+  internalCreateShortcutOnHomeScreen: ActualLiff['internalCreateShortcutOnHomeScreen'];
+  getOrigins: ActualLiff['getOrigins'];
   _dispatchEvent: ActualLiff['_dispatchEvent'];
   _call: ActualLiff['_call'];
   _addListener: ActualLiff['_addListener'];

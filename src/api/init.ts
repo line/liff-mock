@@ -36,6 +36,11 @@ import { _call } from './_call';
 import { _dispatchEvent } from './_dispatchEvent';
 import { _postMessage } from './_postMessage';
 import { _removeListener } from './_removeListener';
+import { getAppLanguage } from './getAppLanguage';
+import { getOrigins } from './getOrigins';
+import { iap } from './iap';
+import { createShortcutOnHomeScreen } from './createShortcutOnHomeScreen';
+import { internalCreateShortcutOnHomeScreen } from './internalCreateShortcutOnHomeScreen';
 
 export const createMockedInit = (
   injectLiffMock: (
@@ -48,6 +53,7 @@ export const createMockedInit = (
     if (!globalStore.isInitCalled) {
       injectLiffMock({
         getLanguage,
+        getAppLanguage,
         getOS,
         getVersion,
         getLineVersion,
@@ -84,6 +90,10 @@ export const createMockedInit = (
         subWindow,
         isSubWindow,
         permission,
+        iap,
+        createShortcutOnHomeScreen,
+        internalCreateShortcutOnHomeScreen,
+        getOrigins,
         _dispatchEvent,
         _call,
         _addListener,
