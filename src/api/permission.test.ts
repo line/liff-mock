@@ -28,4 +28,14 @@ describe('permission', () => {
       );
     });
   });
+
+  describe('getGrantedAll', () => {
+    it('should call mockStore.getMockData', async () => {
+      await permission.getGrantedAll();
+      expect(_mockStore.getMockData).toHaveBeenCalledTimes(1);
+      expect(_mockStore.getMockData).toHaveBeenCalledWith(
+        'permission.getGrantedAll'
+      );
+    });
+  });
 });

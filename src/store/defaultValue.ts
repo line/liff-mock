@@ -46,6 +46,22 @@ const mockContext: Context = {
       permission: false,
       minVer: '11.14.0',
     },
+    addToHomeV2: {
+      permission: true,
+      minVer: '13.20.0',
+    },
+    addToHomeHideDomain: {
+      permission: true,
+      minVer: '13.20.0',
+    },
+    addToHomeLineScheme: {
+      permission: true,
+      minVer: '13.20.0',
+    },
+    iap: {
+      permission: true,
+      minVer: '15.6.0',
+    },
   },
   scope: ['chat_message.write', 'openid', 'profile'],
 };
@@ -54,6 +70,7 @@ export const defaultMockData: MockData = {
   init: undefined,
   getOS: 'web',
   getLanguage: 'en-US',
+  getAppLanguage: 'en',
   getVersion: '2.19.0',
   getLineVersion: null,
   isInClient: false,
@@ -96,7 +113,24 @@ export const defaultMockData: MockData = {
   isSubWindow: false,
   'permission.query': { state: 'unavailable' },
   'permission.requestAll': undefined,
+  'permission.getGrantedAll': ['openid', 'profile'],
   'i18n.setLang': undefined,
+  'iap.getPlatformProducts': {
+    iap_test_product_id: {
+      currency: 'yen',
+      price: 150,
+      productName: 'IAP test product',
+    },
+  },
+  'iap.createPayment': undefined,
+  'iap.requestConsentAgreement': undefined,
+  createShortcutOnHomeScreen: undefined,
+  internalCreateShortcutOnHomeScreen: undefined,
+  getOrigins: {
+    liffApp: 'https://liff.line.me',
+    liffServer: 'https://api.line.me',
+    miniApp: 'https://miniapp.line.me',
+  },
   _dispatchEvent: undefined,
   _call: undefined,
   _addListener: undefined,
