@@ -35,10 +35,10 @@ If you use LIFF Mock with Pluggable SDK mode, you have to install `IsInClientMod
 
 ```ts
 import liff from '@line/liff/core';
-import IsInClientModule from "@line/liff/is-in-client";
+import IsInClientModule from '@line/liff/is-in-client';
 import { LiffMockPlugin } from '@line/liff-mock';
 
-liff.use(new IsInClientModule());  // <-- Please install IsInClientModule before LiffMockPlugin
+liff.use(new IsInClientModule()); // <-- Please install IsInClientModule before LiffMockPlugin
 liff.use(new LiffMockPlugin());
 
 liff.init({
@@ -54,11 +54,11 @@ console.log(profile);
 
 ## CDN
 
-https://unpkg.com/@line/liff-mock@1.0.3/dist/umd/liff-mock.js
+https://unpkg.com/@line/liff-mock@1.0.4/dist/umd/liff-mock.js
 
 ```html
 <!-- in <head> tag -->
-<script src="https://unpkg.com/@line/liff-mock@1.0.3/dist/umd/liff-mock.js"></script>
+<script src="https://unpkg.com/@line/liff-mock@1.0.4/dist/umd/liff-mock.js"></script>
 ```
 
 ```js
