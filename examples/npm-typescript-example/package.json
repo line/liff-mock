@@ -11,6 +11,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.10.0",
+      "onFail": "error"
+    }
+  },
   "dependencies": {
     "@line/liff": "2.19.1",
     "@line/liff-mock": "1.0.1"

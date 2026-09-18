@@ -31,6 +31,13 @@
     "LIFF"
   ],
   "license": "Apache-2.0",
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.10.0",
+      "onFail": "error"
+    }
+  },
   "devDependencies": {
     "@line/liff": "2.27.2",
     "@types/jest": "27.4.1",
