@@ -34,9 +34,13 @@
   "devEngines": {
     "packageManager": {
       "name": "npm",
-      "version": ">=11.10.0",
+      "version": ">=11.16.0",
       "onFail": "error"
     }
+  },
+  "allowScripts": {
+    "fsevents": false,
+    "unrs-resolver": false
   },
   "devDependencies": {
     "@line/liff": "2.27.2",
