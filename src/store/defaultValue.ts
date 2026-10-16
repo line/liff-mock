@@ -64,19 +64,19 @@ const mockContext: Context = {
     },
     activityGetCallState: {
       permission: false,
-      minVer: '0.0.0',
+      minVer: '26.7.0',
     },
     activityGetRecordingState: {
       permission: false,
-      minVer: '0.0.0',
+      minVer: '26.7.0',
     },
     calendarRead: {
       permission: false,
-      minVer: '0.0.0',
+      minVer: '26.13.0',
     },
     lineCalendarWrite: {
       permission: false,
-      minVer: '0.0.0',
+      minVer: '26.13.0',
     },
   },
   scope: ['chat_message.write', 'openid', 'profile'],
