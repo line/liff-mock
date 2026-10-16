@@ -41,6 +41,9 @@ import { getOrigins } from './getOrigins';
 import { iap } from './iap';
 import { createShortcutOnHomeScreen } from './createShortcutOnHomeScreen';
 import { internalCreateShortcutOnHomeScreen } from './internalCreateShortcutOnHomeScreen';
+import { requestFriendship } from './requestFriendship';
+import { activity } from './activity';
+import { calendar } from './calendar';
 
 export const createMockedInit = (
   injectLiffMock: (
@@ -68,6 +71,9 @@ export const createMockedInit = (
         getContext,
         getProfile,
         getFriendship,
+        requestFriendship,
+        activity,
+        calendar,
         permanentLink: {
           createUrl: permanentLink_createUrl,
           createUrlBy: permanentLink_createUrlBy,

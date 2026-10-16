@@ -43,7 +43,7 @@
     "unrs-resolver": false
   },
   "devDependencies": {
-    "@line/liff": "2.27.2",
+    "@line/liff": "2.31.2",
     "@types/jest": "27.4.1",
     "@typescript-eslint/eslint-plugin": "8.44.1",
     "@typescript-eslint/parser": "8.44.1",
@@ -60,6 +60,6 @@
     "webpack-dev-server": "4.8.1"
   },
   "peerDependencies": {
-    "@line/liff": ">= 2.19.0"
+    "@line/liff": ">=2.31.1"
   }
 }
