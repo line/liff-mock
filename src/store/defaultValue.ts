@@ -62,6 +62,22 @@ const mockContext: Context = {
       permission: true,
       minVer: '15.6.0',
     },
+    activityGetCallState: {
+      permission: false,
+      minVer: '26.7.0',
+    },
+    activityGetRecordingState: {
+      permission: false,
+      minVer: '26.7.0',
+    },
+    calendarRead: {
+      permission: false,
+      minVer: '26.13.0',
+    },
+    lineCalendarWrite: {
+      permission: false,
+      minVer: '26.13.0',
+    },
   },
   scope: ['chat_message.write', 'openid', 'profile'],
 };
@@ -90,6 +106,14 @@ export const defaultMockData: MockData = {
   getFriendship: {
     friendFlag: false,
   },
+  requestFriendship: undefined,
+  'activity.getCallState': { isActive: false },
+  'activity.getRecordingState': { isActive: false },
+  'calendar.getEvents': {
+    events: [],
+    isThirdPartyCalendarAccessGranted: false,
+  },
+  'calendar.showEventCreationModal': undefined,
   'permanentLink.createUrl': 'https://line.me',
   'permanentLink.createUrlBy': 'https://line.me',
   'permanentLink.setExtraQueryParam': undefined,

@@ -27,6 +27,11 @@ export type TargetApi = {
   getContext: ActualLiff['getContext'];
   getProfile: ActualLiff['getProfile'];
   getFriendship: ActualLiff['getFriendship'];
+  requestFriendship: ActualLiff['requestFriendship'];
+  'activity.getCallState': ActualLiff['activity']['getCallState'];
+  'activity.getRecordingState': ActualLiff['activity']['getRecordingState'];
+  'calendar.getEvents': ActualLiff['calendar']['getEvents'];
+  'calendar.showEventCreationModal': ActualLiff['calendar']['showEventCreationModal'];
   'permanentLink.createUrl': ActualLiff['permanentLink']['createUrl'];
   'permanentLink.createUrlBy': ActualLiff['permanentLink']['createUrlBy'];
   'permanentLink.setExtraQueryParam': ActualLiff['permanentLink']['setExtraQueryParam'];
