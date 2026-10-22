@@ -60,6 +60,6 @@
     "webpack-dev-server": "4.8.1"
   },
   "peerDependencies": {
-    "@line/liff": ">=2.31.1"
+    "@line/liff": ">=2.19.0 <2.20.0 || >=2.31.1"
   }
 }

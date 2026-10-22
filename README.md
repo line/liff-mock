@@ -2,7 +2,10 @@
 
 LIFF Mock is a LIFF Plugin that make testing your LIFF app easy.
 
-**LIFF Mock requires LIFF SDK v2.31.1 or later.**
+**※ LIFF Plugin feature is available since LIFF SDK v2.19.0.**
+
+> [!WARNING]
+> LIFF SDK versions v2.20.0 through v2.31.0 contain a security vulnerability. If you are using an affected version, upgrade to v2.31.1 or later. For details, see the [security advisory](https://developers.line.biz/en/news/2026/10/20/liff-sdk-issue/).
 
 # Usage
 
